@@ -1,0 +1,14 @@
+class CreaBottiglieprivate
+{
+	public static void main(String[] args) 
+	{
+		Bottigliaprivate z=new Bottigliaprivate();
+		
+		String a="plastica"; //se il valore corrisponde ad un attribbuto corretto quando verrà eseguito comparirà una tipologia di messaggio altrimenti uno che corrisponde che non è corretto.
+		String s="verde";
+
+		z.assegnaMateriale(a);
+		z.assegnaColore(s);
+
+	}
+}

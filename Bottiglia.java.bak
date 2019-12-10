@@ -1,0 +1,12 @@
+class Bottiglia //categoria dell'oggetto
+{
+
+	private String materiale="vetro"; // Per dare un valore a String deve essere all'interno di ""
+	private double capacita=0.5; //Per dare un valore a double deve essere un numero decimale
+	private String colore="verde";
+	private String forma="sferica";
+	//Se vuoi evitare che si possa scrivere qualsiasi cosa in qualsiasi proprietà puoi aggiungere private
+
+	//Bisogna aggiungere i metodi di accesso alle proprietà se si rendono privati
+
+}

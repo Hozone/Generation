@@ -1,27 +1,14 @@
-class Bottiglia 
+class Bottiglia //categoria dell'oggetto
 {
 
-	private String materiale;
+	String materiale="vetro"; // Per dare un valore a String deve essere all'interno di ""
+	double capacita=0.5; //Per dare un valore a double deve essere un numero decimale
+	String colore="verde";
+	String forma="sferica";
+	
+	//Se vuoi evitare che si possa scrivere qualsiasi cosa in qualsiasi proprietà puoi aggiungere private
+	//Bisogna aggiungere i "metodi" di accesso alle proprietà se si rendono privati
 
-	private double capacita;
-	private String colore;
-	private String forma;
-
-	//aggiungere i metodi di accesso alle proprietà
-
-	public void assegnaMateriale(String m)
-	{
-		if(m.equals("vetro") || m.equals("plastica"))
-		{
-			
-			materiale=m;
-			System.out.println("assegnazione effettuata con successo");
-		}
-		else{
-				System.out.println("materiale non valido");
-
-		}
-
-	}
+	
 
 }

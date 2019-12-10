@@ -22,6 +22,57 @@ class Auto
 		marca=k; 
 	}
 
+	public String getMarca()
+	{
+		return marca; //in fase di lettura il "return" deve essere l'ultima istruzione
+	}
+
+	public void setMarca(String k)
+	{
+		marca=k; 
+	}
+
+	public String getMarca()
+	{
+		return marca; //in fase di lettura il "return" deve essere l'ultima istruzione
+	}
+
+	public void setMarca(String k)
+	{
+		marca=k; 
+	}
+
+	public String getMarca()
+	{
+		return marca; //in fase di lettura il "return" deve essere l'ultima istruzione
+	}
+
+	public void setMarca(String k)
+	{
+		marca=k; 
+	}
+
+	public String getMarca()
+	{
+		return marca; //in fase di lettura il "return" deve essere l'ultima istruzione
+	}
+
+	public void setMarca(String k)
+	{
+		marca=k; 
+	}
+
+	public String getMarca()
+	{
+		return marca; //in fase di lettura il "return" deve essere l'ultima istruzione
+	}
+
+	public void setMarca(String k)
+	{
+		marca=k; 
+	}
+
+
 	public int getCilindrata()
 	{
 		return cilindrata;
