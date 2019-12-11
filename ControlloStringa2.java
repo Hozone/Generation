@@ -10,15 +10,22 @@ class ControlloStringa2
 		{
 
 
-			String nome=JOptionPane.showInputDialog("INSERISCI UNA STRINGA");
-			if (!nome.equals("vito"))
+			String nome=JOptionPane.showInputDialog("INSERISCI UNA PASSWORD");
+			
+			if (!nome.equals("pippo"))
 			{
-				check--;
+				check=check-1;
 				System.out.println("username errata ");
 				System.out.println("hai ancora "+check+" tentativi");
 				
 
 			}
+			else
+			{
+				System.out.println("OK");
+				break;
+			}
+			
 		}
 		
 
