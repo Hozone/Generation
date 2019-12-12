@@ -29,7 +29,7 @@ class ContoCorrente
 
 				boolean esito=true;
 
-				if (prelievo>this.saldo)
+				if (prelievo>this.saldo || prelievo <=0)
 				{
 
 					esito=false;
