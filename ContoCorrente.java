@@ -6,6 +6,27 @@ class ContoCorrente
 		private String cognome;
 
 
+		public ContoCorrente()
+		{
+			
+		}
+		public ContoCorrente(double saldo)
+		{
+			this.saldo=saldo;
+		}
+		
+		
+		
+		
+		public ContoCorrente(double saldo,String nome,String cognome)
+		{
+			this.saldo=saldo;
+			this.nome=nome;
+			this.cognome=cognome;
+		}
+
+
+
 
 		public boolean deposito(double deposito){
 
