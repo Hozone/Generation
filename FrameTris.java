@@ -161,7 +161,8 @@ public class FrameTris extends Frame implements ActionListener,MouseListener
             if(ch[i]!='B')
             {
                 if((ch[i+3]==ch[i])&&(ch[i+6]==ch[i]))
-                /*risultato.setText("Complimenti! Hai Vinto!");*/vinto();            }
+                /*risultato.setText("Complimenti! Hai Vinto!");*/vinto();            
+	    }
         }
         
     /************VITTORIA ORIZZONTALI************/
@@ -171,7 +172,8 @@ public class FrameTris extends Frame implements ActionListener,MouseListener
             if(ch[i]!='B')
             {
                 if((ch[i]==ch[i+1])&&(ch[i]==ch[i+2]))
-                /*risultato.setText("Complimenti! Hai Vinto!");*/vinto();                i=i+2;
+                /*risultato.setText("Complimenti! Hai Vinto!");*/vinto();                
+		i=i+2;
             }
             else
             i=i+2;
@@ -192,7 +194,7 @@ public class FrameTris extends Frame implements ActionListener,MouseListener
         Label l=new Label("HAI VINTO");
         m.setLayout(null);
         m.add(l);
-        l.setBounds(20,20,60,60);
+        l.setSize(50,50);
         m.setVisible(true);
         m.setSize(100,100);
         return m;
@@ -204,7 +206,7 @@ public class FrameTris extends Frame implements ActionListener,MouseListener
         Label l1=new Label("PAREGGIO");
         m.setLayout(null);
         m.add(l1);
-        l1.setBounds(20,20,60,60);
+        l1.setSize(50,50);
         m.setVisible(true);
         m.setSize(100,100);
         return m;    
