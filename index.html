@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Esercizio</title>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <label for="importo">Importo</label>
+        <input id="importo" type="text" name="importo"><br>
+        <label for="tipo">Tipo Prodotto</label>
+        <select id="tipo" name="tipo">
+            <option value="3">Alimentari</option>
+            <option value="10">Edilizia</option>
+            <option value="22">Computer</option>
+        </select><br>
+        <a href="javascript:calcola()">Calcola</a><br>
+        <a href="javascript:reset()">Azzera</a><br>
+        <label for="iva">IVA</label>
+        <input id="iva" type="text"><br>
+        <label for="saldo">Saldo</label>
+        <input id="saldo" type="text">
+    </form>
+</body>
+<script>
+    function calcola() {
+        var importo = document.getElementById("importo").value;
+        var tipo = document.getElementById("tipo").value;
+        var iva = importo * (tipo / 100);
+        document.getElementById("iva").value = iva;
+        document.getElementById("saldo").value = parseInt(importo) + iva;
+    }
+
+    function reset() {
+        document.getElementById("importo").value = "";
+        document.getElementById("iva").value = "";
+        document.getElementById("saldo").value = "";
+    }
+</script>
+
+</html>
