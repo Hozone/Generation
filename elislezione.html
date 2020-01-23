@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+
+
+
+        //ciclare nelle "collection"
+        function myFunction() {
+            var selchbox = [];
+            var inputfields = document.getElementsByName("myCheck");
+            var ar_inputflds = inputfields.length;
+
+            for (var i = 0; i < ar_inputflds; i++) {
+                if (inputfields[i].type == 'checkbox' && inputfields[i].checked == true)
+                    selchbox.push(inputfields[i].value);
+            }
+            return selchbox;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //chiama verificare checkbox attivati
+        function vedi() {
+            var scelta = [];
+            scelta = myFunction();
+            var messaggioutente = "";
+            for (var valore of scelta) {
+
+                messaggioutente += ("-" + valore);
+            }
+            alert(messaggioutente);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //apertura finestre
+
+        function autoPopup() {
+            var stili = "top=10, left=10, width=400, height=250, status=no, menubar=no, toolbar=no scrollbars=no";
+            var testo = window.open("", "", stili);
+            testo.document.write("<html>");
+            testo.document.write(" <head>");
+            testo.document.write(" <title>HTML.it - il portale chi fa Web</title>");
+            testo.document.write(" <basefont size=2 face=Tahoma>");
+            testo.document.write(" </head>");
+            testo.document.write("<body topmargin=50px");
+            testo.document.write("<div align=center><b>Popup generata dinamicamente</a></div>");
+            testo.document.write("</body>");
+            testo.document.write("</html>");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //funzione aggiunta in esecuzione
+        function messaggio() {
+            alert("Evento aggiunto n esecuzione");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //aggiungo IMMAGINE A UN DIV dinamicamente
+        function aggiungitag() {
+            var mainDiv = document.getElementById("mainDiv");
+            var img = document.createElement("img");
+            var srcAttr = document.createAttribute("src");
+            srcAttr.value = "marcello_valeri.jpg";
+            img.setAttributeNode(srcAttr);
+
+
+            mainDiv.appendChild(img);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //aggiungo tag dinamicamente (collection java)
+        function inserisci() {
+            var sceltacitta = document.getElementById("scegli");
+            var opzione = document.createElement("option");
+            var srcAttr = document.createAttribute("value");
+            var citta=document.getElementById("cittanuova").value;
+            srcAttr.value = citta;
+            opzione.text = citta;
+            opzione.setAttributeNode(srcAttr);
+
+
+            sceltacitta.appendChild(opzione);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //aggiungo eventi ai tag
+        function aggiungievento() {
+            document.getElementById("newevent").addEventListener("click", messaggio);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <a href="javascript:aggiungievento()">Per aggiungere evento in esecuzione</a>
+    <button id="newevent">Cliccare</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <input value="ford" name="myCheck" type="checkbox">Ford</input>
+    <input type="checkbox" value="fiat" name="myCheck">Fiat</input>
+    <input type="checkbox" value="BMW" name="myCheck">BMW</input>
+    <button onclick="vedi()">Verifica checkbox attivato</button>
+
+    <br><br>
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <input id="cittanuova" type="text" placeholder="Inserisci nome città">
+    <button onclick="inserisci()">Inserisci tag in esecuzione</button>
+
+    <select name="scegli" id="scegli">
+        <option value="Calcio">Calcio</option>
+        <option value="Pallavolo">Pallavolo</option>
+        <option value="Pallamano">Pallamano</option>
+    </select>
+
+
+
+
+</body>
+
+</html>
