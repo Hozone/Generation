@@ -9,7 +9,7 @@ public class ConfrontoStringhe {
 		String primaParte="Mi chiamo";
 		String secondaParte=" Lorenzo";
 		
-		// in realt‡ si tratta dello stesso oggetto, per questo hanno il medesimo contenuto
+		// in realt√† si tratta dello stesso oggetto, per questo hanno il medesimo contenuto
 		if (unAltraStringa==unaStringa)
 			System.out.println("Le stringhe sono uguali");
 		else
