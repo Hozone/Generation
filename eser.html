@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        function inserisci(listato, valor, testo) {
+            var sceltacitta = document.getElementById(listato);
+            var opzione = document.createElement("option");
+            var srcAttr = document.createAttribute("value");
+            var citta;
+            var percentuale_sconto
+            //per nuovo corso
+            if (listato == "corso") {
+                citta = valor;
+                percentuale_sconto = valor;
+            }
+            else {
+                citta = document.getElementById(valor).value;
+                percentuale_sconto = document.getElementById(valor).value;
+                if (listato == "docente") {
+                    citta = document.getElementById(valor).value + " - " + document.getElementById("cognome").value;
+                    percentuale_sconto = citta;
+                }
+            }
+            srcAttr.value = percentuale_sconto;
+            opzione.text = citta;
+            opzione.setAttributeNode(srcAttr);
+
+
+            sceltacitta.appendChild(opzione);
+        }
+
+
+        function inseriscicorso(listato, valor, testo) {
+
+            var citta = document.getElementById("materia").value;
+            citta += " , " + document.getElementById("docente").value;
+            inserisci(listato, citta, citta);
+        }
+
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="cognome" placeholder="Cognome">
+    <button onclick="inserisci('docente','nome','nomemateria')">Inserisci</button>
+
+
+    <br>
+    <br>
+    <br>
+
+    <input type="text" id="nomemateria" placeholder="Materia">
+    <button onclick="inserisci('materia','nomemateria','cognome')">Inserisci Materia</button>
+
+    <br>
+    <br>
+    <br>
+
+    <select name="" id="materia"></select>
+    <select name="" id="docente"></select>
+    <button onclick="inseriscicorso('corso','materia','docente')">Inserisci skill-docente</button>
+
+
+
+
+    <br>
+    <br>
+    <br>
+
+
+    <label for="">Materia docente</label>
+    <select name="" id="corso"></select>
+
+
+
+</body>
+
+
+
+
+</html>
