@@ -1,12 +1,12 @@
 class  Auto
 {
 	//***************************
-	//sezione delle propriet‡
+	//sezione delle propriet√†
 	private String marca;
 	private int cilindrata;
 	private String colore;
 	private String tipoCarburante;
-	//fine dichiarazione propriet‡
+	//fine dichiarazione propriet√†
 	//***************************
 
 
