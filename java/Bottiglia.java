@@ -7,7 +7,7 @@ class Bottiglia
 	private String colore;
 	private String forma;
 
-	//aggiungere i metodi di accesso alle propriet‡
+	//aggiungere i metodi di accesso alle propriet√†
 
 	public void assegnaMateriale(String m)
 	{
