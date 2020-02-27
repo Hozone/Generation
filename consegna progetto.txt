@@ -1,0 +1,21 @@
+AUTONOLEGGIO:
+
+lato cliente:
+	registrazione
+	login
+	scelta auto da noleggiare per x giorni
+	cancellazione/modifica del noleggio
+
+
+admin:
+	login
+	accetta la registrazione
+	aggiungere macchine
+	modificare i prezzi
+	rimuovere utenti
+	modificare macchine e prezzi
+	cancellazione/modifica del noleggio
+
+
+categorie auto:
+suv:10 e/g, lusso:15 e/g, citycar: 7,5 e/g, se elettriche +5 e/g
